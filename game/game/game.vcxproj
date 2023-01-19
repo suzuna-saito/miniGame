@@ -162,8 +162,13 @@
     <ClCompile Include="Obstacle.cpp" />
     <ClCompile Include="Play.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Result.cpp" />
     <ClCompile Include="SceneBase.cpp" />
+    <ClCompile Include="Text.cpp" />
     <ClCompile Include="Title.cpp" />
+    <ClCompile Include="UIBase.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Area.h" />
@@ -176,8 +181,13 @@
     <ClInclude Include="Obstacle.h" />
     <ClInclude Include="Play.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Result.h" />
     <ClInclude Include="SceneBase.h" />
+    <ClInclude Include="Text.h" />
     <ClInclude Include="Title.h" />
+    <ClInclude Include="UIBase.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,21 +1,21 @@
-#include "Title.h"
+#include "Result.h"
 
-Title::Title()
-	: SceneBase(SceneBase::Scene::eTitle)
+Result::Result()
+    : SceneBase(SceneBase::Scene::eResult)
 {
 	new Text();
 }
 
-Title::~Title()
+Result::~Result()
 {
 }
 
-SceneBase::Scene Title::Update()
+SceneBase::Scene Result::Update()
 {
 	// スペースボタンが押されたらシーンを遷移する
 	if (CheckHitKey(KEY_INPUT_SPACE) == 1)
 	{
-		return Scene::ePlay;
+		return Scene::eTitle;
 	}
 
 	// シーン遷移条件を満たしていなかったら今のタグを返す

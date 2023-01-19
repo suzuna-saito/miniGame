@@ -1,12 +1,11 @@
 #pragma once
-#include <vector>
 #include "DxLib.h"
 #include "Fps.h"
+#include "SceneBase.h"
+#include "Title.h"
+#include "Play.h"
 #include "ObjectManager.h"
-#include "Area.h"
-#include "Goal.h"
-#include "Obstacle.h"
-#include "Player.h"
+
 
 /*
 * ゲームループ処理を行うクラス
@@ -31,10 +30,15 @@ public:
     static const int MHeight;   // 画面の高さ
 
 private:
+    // mReturnSceneTagを参考に新しいシーンを生成する
+    void NewScene();
     // 更新処理
     void UpdateGame();
     // 描画処理
     void DrawGame();
 
     class Fps* mFps;            // FPS計測クラス
+
+    class SceneBase* mNowScene;         // 現在のシーン
+    SceneBase::Scene mReturnSceneTag;   // updateで返ってきたシーンのタグ
 };

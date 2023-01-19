@@ -4,6 +4,7 @@
 #include "Object.h"
 #include "Obstacle.h"
 #include "Area.h"
+#include "Goal.h"
 #include "HP.h"
 
 /*
@@ -16,7 +17,8 @@ public:
     /// コンストラクタ
     /// </summary>
     /// <param name="_obstacle">障害物クラスのポインタ</param>
-    Player(std::vector<class Obstacle*> _obstacle);
+    /// <param name="_goal">ゴールクラスのポインタ</param>
+    Player(std::vector<class Obstacle*> _obstacle, class Goal* _goal);
     // デストラクタ
     ~Player();
 
@@ -35,6 +37,7 @@ public:
 
 private:
     std::vector<class Obstacle*>mObstacles; // 障害物クラスのポインタ
+    class Goal* mGoal;                      // ゴールクラスのポインタ
 
     const int MMaxHitTime;  // 障害物に当たったときの最大経過時間（無敵時間）
     int mHitCount;          // 障害物に当たってから経過した時間

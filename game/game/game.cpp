@@ -6,6 +6,8 @@ const int game::MHeight = 1080; // 画面の高さ
 
 game::game()
 	: mFps(nullptr)
+	, mNowScene(new Title)
+	, mReturnSceneTag(SceneBase::mIsSceneTag)
 {
 }
 
@@ -39,38 +41,42 @@ bool game::Init()
 
 void game::GameLoop()
 {
-	// @@
-	// 生成
-	Area* mArea = new Area();
-	new Goal();
-	std::vector<Obstacle*> mObstacles;
-	for (int i = 0; i < 3; ++i)
-	{
-		mObstacles.emplace_back(new Obstacle(i));
-	}
-
-	Player* mPlayer = new Player(mObstacles);
-
 	// エスケープキーが押されるかウインドウが閉じられるまでループ
 	while (ProcessMessage() == 0 && CheckHitKey(KEY_INPUT_ESCAPE) == 0)
 	{
+		// 現在のシーンの更新処理
+		mReturnSceneTag = mNowScene->Update();
+		// シーンタグの切り替えが発生したら
+		if (mReturnSceneTag != SceneBase::mIsSceneTag)
+		{
+			// 現在のシーンの解放
+			delete mNowScene;
+			// オブジェクトを削除する
+			ObjectManager::DeleteObject();
+
+			// 新しいシーンを生成
+			NewScene();
+		}
+
 		// 更新処理
 		UpdateGame();
 		// 描画処理
 		DrawGame();
 	}
-
-	// オブジェクトの解放
-	ObjectManager::DeleteObject();
 }
 
-void game::Termination()
+void game::NewScene()
 {
-	// クラスの解放処理
-	delete mFps;
-
-	// ＤＸライブラリの後始末
-	DxLib_End();
+	// 返り値で返ってきたタグがタイトルだったら
+	if (mReturnSceneTag == SceneBase::Scene::eTitle)
+	{
+		mNowScene = new Title();   // タイトルを生成
+	}
+	// 返り値で返ってきたタグがプレイだったら
+	else if (mReturnSceneTag == SceneBase::Scene::ePlay)
+	{
+		mNowScene = new Play();    // プレイを生成
+	}
 }
 
 void game::UpdateGame()
@@ -95,4 +101,17 @@ void game::DrawGame()
 
 	// 裏画面の内容を表画面に反映させる
 	ScreenFlip();
+}
+
+void game::Termination()
+{
+	// 実体を一つしか持たないクラスの解放処理
+	ObjectManager::DeleteObject();	// オブジェクトの解放
+
+	// クラスの解放処理
+	delete mNowScene;
+	delete mFps;
+
+	// ＤＸライブラリの後始末
+	DxLib_End();
 }

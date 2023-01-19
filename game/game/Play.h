@@ -1,5 +1,10 @@
 #pragma once
+#include <vector>
 #include "SceneBase.h"
+#include "Area.h"
+#include "Goal.h"
+#include "Obstacle.h"
+#include "Player.h"
 
 /* 
 * プレイシーン
@@ -17,4 +22,8 @@ public:
 	/// </summary>
 	/// <returns>現在のシーンのポインタ</returns>
 	SceneBase::Scene Update()override;
+
+private:
+	// クラスのポインタ変数
+	class Player* mPlayer;	// プレイヤー
 };

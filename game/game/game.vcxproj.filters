@@ -35,6 +35,15 @@
     <Filter Include="ソース ファイル\Scene\Play">
       <UniqueIdentifier>{dcc4d95b-8a6c-4597-a711-211938d3da66}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Scene\Result">
+      <UniqueIdentifier>{e928439d-8252-4d95-bd87-caecff06f07d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Obj\UI">
+      <UniqueIdentifier>{10c3cba7-a35f-4726-a6c3-f6a6b2bcd584}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Obj\UI\Text">
+      <UniqueIdentifier>{c3f05199-8441-4e56-985f-d98d3e41b349}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -76,6 +85,15 @@
     <ClCompile Include="Play.cpp">
       <Filter>ソース ファイル\Scene\Play</Filter>
     </ClCompile>
+    <ClCompile Include="Result.cpp">
+      <Filter>ソース ファイル\Scene\Result</Filter>
+    </ClCompile>
+    <ClCompile Include="UIBase.cpp">
+      <Filter>ソース ファイル\Obj\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>ソース ファイル\Obj\UI\Text</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Object.h">
@@ -113,6 +131,15 @@
     </ClInclude>
     <ClInclude Include="Play.h">
       <Filter>ソース ファイル\Scene\Play</Filter>
+    </ClInclude>
+    <ClInclude Include="Result.h">
+      <Filter>ソース ファイル\Scene\Result</Filter>
+    </ClInclude>
+    <ClInclude Include="UIBase.h">
+      <Filter>ソース ファイル\Obj\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>ソース ファイル\Obj\UI\Text</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

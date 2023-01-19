@@ -1,8 +1,9 @@
 #include "Player.h"
 
-Player::Player(std::vector<class Obstacle*> _obstacles)
+Player::Player(std::vector<class Obstacle*> _obstacles , class Goal* _goal)
     : Object()
 	, mObstacles(_obstacles)
+	, mGoal(_goal)
 	, MMaxHitTime(80)
 	, mHitCount(0)
 	, mHitFlag(false)
@@ -12,6 +13,7 @@ Player::Player(std::vector<class Obstacle*> _obstacles)
 	mPos = { game::MWidth / 2.0f - mSize.x / 2.0f ,Area::mHitSize.y - mSize.y - 30.0f }; // ポジション（画面真ん中下にくる)
     mMoveSpeed = 500.0f;		// 移動速度
 
+	// 初期ポジションの設定
 	mInitPos = mPos;
 
 	// 残機の生成
@@ -96,6 +98,12 @@ void Player::Update(float _deltaTime)
 		{
 			mHitCount = 0;
 		}
+	}
+
+	// ゴールまでたどりついたら現在のゲームタイプをクリアにする
+	if (HitCheck(this, mGoal))
+	{
+		SceneBase::mNowGameType = SceneBase::NowGameType::eGameClear;
 	}
 }
 
