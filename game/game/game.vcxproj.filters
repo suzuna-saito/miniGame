@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ソース ファイル\Obj">
+      <UniqueIdentifier>{f0c89235-a8ff-43cf-be2c-9f86bb54ecd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Obj\Area">
+      <UniqueIdentifier>{cd9c2a68-69a7-4808-8fee-92a978bd770c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Obj\Player">
+      <UniqueIdentifier>{c736b07a-99f7-4aac-96d6-197a1bdbb6e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Obj\Obstacle">
+      <UniqueIdentifier>{9704e457-b78a-4961-985e-f1e952c6d3c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Obj\Player\HP">
+      <UniqueIdentifier>{2c8471d2-5c9a-47ac-bfb7-24c20b0035a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Fps">
+      <UniqueIdentifier>{7b18ceb0-f664-4f98-993b-a69c0abb5d26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Obj\Goal">
+      <UniqueIdentifier>{7e4ca04c-680f-4ea1-ad61-ea8588538379}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Scene">
+      <UniqueIdentifier>{3a40dc29-4a1e-4d8c-9e9a-74f732f76838}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Scene\Title">
+      <UniqueIdentifier>{7ecfcae2-2dcc-45c0-b733-ce1a17d6e7f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Scene\Play">
+      <UniqueIdentifier>{dcc4d95b-8a6c-4597-a711-211938d3da66}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>ソース ファイル\Obj</Filter>
+    </ClCompile>
+    <ClCompile Include="Area.cpp">
+      <Filter>ソース ファイル\Obj\Area</Filter>
+    </ClCompile>
+    <ClCompile Include="game.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>ソース ファイル\Obj\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Obstacle.cpp">
+      <Filter>ソース ファイル\Obj\Obstacle</Filter>
+    </ClCompile>
+    <ClCompile Include="HP.cpp">
+      <Filter>ソース ファイル\Obj\Player\HP</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectManager.cpp">
+      <Filter>ソース ファイル\Obj</Filter>
+    </ClCompile>
+    <ClCompile Include="Fps.cpp">
+      <Filter>ソース ファイル\Fps</Filter>
+    </ClCompile>
+    <ClCompile Include="Goal.cpp">
+      <Filter>ソース ファイル\Obj\Goal</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneBase.cpp">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Title.cpp">
+      <Filter>ソース ファイル\Scene\Title</Filter>
+    </ClCompile>
+    <ClCompile Include="Play.cpp">
+      <Filter>ソース ファイル\Scene\Play</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Object.h">
+      <Filter>ソース ファイル\Obj</Filter>
+    </ClInclude>
+    <ClInclude Include="Area.h">
+      <Filter>ソース ファイル\Obj\Area</Filter>
+    </ClInclude>
+    <ClInclude Include="game.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>ソース ファイル\Obj\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Obstacle.h">
+      <Filter>ソース ファイル\Obj\Obstacle</Filter>
+    </ClInclude>
+    <ClInclude Include="HP.h">
+      <Filter>ソース ファイル\Obj\Player\HP</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectManager.h">
+      <Filter>ソース ファイル\Obj</Filter>
+    </ClInclude>
+    <ClInclude Include="Fps.h">
+      <Filter>ソース ファイル\Fps</Filter>
+    </ClInclude>
+    <ClInclude Include="Goal.h">
+      <Filter>ソース ファイル\Obj\Goal</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneBase.h">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Title.h">
+      <Filter>ソース ファイル\Scene\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="Play.h">
+      <Filter>ソース ファイル\Scene\Play</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
