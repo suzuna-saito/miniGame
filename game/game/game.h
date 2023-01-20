@@ -1,11 +1,12 @@
 #pragma once
 #include "DxLib.h"
 #include "Fps.h"
+#include "InputKey.h"
+#include "ObjectManager.h"
 #include "SceneBase.h"
 #include "Title.h"
 #include "Play.h"
-#include "ObjectManager.h"
-
+#include "Result.h"
 
 /*
 * ゲームループ処理を行うクラス

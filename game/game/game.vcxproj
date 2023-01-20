@@ -156,6 +156,7 @@
     <ClCompile Include="game.cpp" />
     <ClCompile Include="Goal.cpp" />
     <ClCompile Include="HP.cpp" />
+    <ClCompile Include="InputKey.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="ObjectManager.cpp" />
@@ -166,9 +167,6 @@
     <ClCompile Include="SceneBase.cpp" />
     <ClCompile Include="Text.cpp" />
     <ClCompile Include="Title.cpp" />
-    <ClCompile Include="UIBase.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Area.h" />
@@ -176,6 +174,7 @@
     <ClInclude Include="game.h" />
     <ClInclude Include="Goal.h" />
     <ClInclude Include="HP.h" />
+    <ClInclude Include="InputKey.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="ObjectManager.h" />
     <ClInclude Include="Obstacle.h" />
@@ -185,9 +184,6 @@
     <ClInclude Include="SceneBase.h" />
     <ClInclude Include="Text.h" />
     <ClInclude Include="Title.h" />
-    <ClInclude Include="UIBase.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClInclude>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

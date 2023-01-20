@@ -52,6 +52,8 @@ void ObjectManager::DeleteObject()
 		// ––”ö—v‘f‚©‚çíœ
 		delete mObjectManager->mObjects.back();
 	}
+
+	mObjectManager->mObjects.clear();
 }
 
 void ObjectManager::UpdateObject(float _deltaTime)

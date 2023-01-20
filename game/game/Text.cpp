@@ -10,7 +10,14 @@ Text::Text()
     }
     else if(SceneBase::mIsSceneTag == SceneBase::Scene::eResult)
     {
-        mText = "これはリザルトです";
+        if (SceneBase::mNowGameType == SceneBase::NowGameType::eGameClear)
+        {
+            mText = "ゲームクリアです";
+        }
+        else if (SceneBase::mNowGameType == SceneBase::NowGameType::eGameOver)
+        {
+            mText = "ゲームオーバーです";
+        }
     }
 }
 

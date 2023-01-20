@@ -22,6 +22,12 @@ void HP::Update(float _deltaTime)
 	{
 		--mHP;
 	}
+
+	// HPが0になったらゲームオーバーにする
+	if (mHP == 0)
+	{
+		SceneBase::mNowGameType = SceneBase::NowGameType::eGameOver;
+	}
 }
 
 void HP::Draw()

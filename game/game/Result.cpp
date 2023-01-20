@@ -13,7 +13,7 @@ Result::~Result()
 SceneBase::Scene Result::Update()
 {
 	// スペースボタンが押されたらシーンを遷移する
-	if (CheckHitKey(KEY_INPUT_SPACE) == 1)
+	if (InputKey::CheckInput(KEY_INPUT_SPACE) == InputKey::InputState::ePushMoment)
 	{
 		return Scene::eTitle;
 	}

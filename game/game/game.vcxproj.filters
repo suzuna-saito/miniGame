@@ -20,9 +20,6 @@
     <Filter Include="ソース ファイル\Obj\Player\HP">
       <UniqueIdentifier>{2c8471d2-5c9a-47ac-bfb7-24c20b0035a5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\Fps">
-      <UniqueIdentifier>{7b18ceb0-f664-4f98-993b-a69c0abb5d26}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\Obj\Goal">
       <UniqueIdentifier>{7e4ca04c-680f-4ea1-ad61-ea8588538379}</UniqueIdentifier>
     </Filter>
@@ -43,6 +40,15 @@
     </Filter>
     <Filter Include="ソース ファイル\Obj\UI\Text">
       <UniqueIdentifier>{c3f05199-8441-4e56-985f-d98d3e41b349}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\System">
+      <UniqueIdentifier>{908f44c2-712a-484a-b4f1-b8fe398f1820}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\System\Fps">
+      <UniqueIdentifier>{7b18ceb0-f664-4f98-993b-a69c0abb5d26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\System\InputKey">
+      <UniqueIdentifier>{373b0e16-3717-42fb-aae1-d71ac9102ae8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -71,7 +77,7 @@
       <Filter>ソース ファイル\Obj</Filter>
     </ClCompile>
     <ClCompile Include="Fps.cpp">
-      <Filter>ソース ファイル\Fps</Filter>
+      <Filter>ソース ファイル\System\Fps</Filter>
     </ClCompile>
     <ClCompile Include="Goal.cpp">
       <Filter>ソース ファイル\Obj\Goal</Filter>
@@ -88,11 +94,11 @@
     <ClCompile Include="Result.cpp">
       <Filter>ソース ファイル\Scene\Result</Filter>
     </ClCompile>
-    <ClCompile Include="UIBase.cpp">
-      <Filter>ソース ファイル\Obj\UI</Filter>
-    </ClCompile>
     <ClCompile Include="Text.cpp">
       <Filter>ソース ファイル\Obj\UI\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="InputKey.cpp">
+      <Filter>ソース ファイル\System\InputKey</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -118,7 +124,7 @@
       <Filter>ソース ファイル\Obj</Filter>
     </ClInclude>
     <ClInclude Include="Fps.h">
-      <Filter>ソース ファイル\Fps</Filter>
+      <Filter>ソース ファイル\System\Fps</Filter>
     </ClInclude>
     <ClInclude Include="Goal.h">
       <Filter>ソース ファイル\Obj\Goal</Filter>
@@ -135,11 +141,11 @@
     <ClInclude Include="Result.h">
       <Filter>ソース ファイル\Scene\Result</Filter>
     </ClInclude>
-    <ClInclude Include="UIBase.h">
-      <Filter>ソース ファイル\Obj\UI</Filter>
-    </ClInclude>
     <ClInclude Include="Text.h">
       <Filter>ソース ファイル\Obj\UI\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="InputKey.h">
+      <Filter>ソース ファイル\System\InputKey</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

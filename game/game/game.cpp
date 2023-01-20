@@ -6,7 +6,7 @@ const int game::MHeight = 1080; // 画面の高さ
 
 game::game()
 	: mFps(nullptr)
-	, mNowScene(new Title)
+	, mNowScene(nullptr)
 	, mReturnSceneTag(SceneBase::mIsSceneTag)
 {
 }
@@ -35,17 +35,23 @@ bool game::Init()
 
 	// 実態を一つしか持たないクラスの作成
 	ObjectManager::CreateInstance();	// ObjectManagerクラス
+	InputKey::CreateInstance();			// 入力管理クラス
 
 	return true;
 }
 
 void game::GameLoop()
 {
+	mNowScene = new Title();
+
 	// エスケープキーが押されるかウインドウが閉じられるまでループ
 	while (ProcessMessage() == 0 && CheckHitKey(KEY_INPUT_ESCAPE) == 0)
 	{
 		// 現在のシーンの更新処理
 		mReturnSceneTag = mNowScene->Update();
+		// 入力管理クラスの更新
+		InputKey::TmpKeyUpdate();
+
 		// シーンタグの切り替えが発生したら
 		if (mReturnSceneTag != SceneBase::mIsSceneTag)
 		{
@@ -77,6 +83,11 @@ void game::NewScene()
 	{
 		mNowScene = new Play();    // プレイを生成
 	}
+	// 返り値で返ってきたタグがリザルトだったら
+	else if (mReturnSceneTag == SceneBase::Scene::eResult)
+	{
+		mNowScene = new Result();    // リザルトを生成
+	}
 }
 
 void game::UpdateGame()
@@ -107,6 +118,7 @@ void game::Termination()
 {
 	// 実体を一つしか持たないクラスの解放処理
 	ObjectManager::DeleteObject();	// オブジェクトの解放
+	InputKey::DeleteInstance();		// 入力管理クラスの解放
 
 	// クラスの解放処理
 	delete mNowScene;

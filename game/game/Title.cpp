@@ -3,6 +3,9 @@
 Title::Title()
 	: SceneBase(SceneBase::Scene::eTitle)
 {
+	// 現在のゲームタイプをプレイに更新
+	mNowGameType = NowGameType::eGamePlay;
+
 	new Text();
 }
 
@@ -12,8 +15,8 @@ Title::~Title()
 
 SceneBase::Scene Title::Update()
 {
-	// スペースボタンが押されたらシーンを遷移する
-	if (CheckHitKey(KEY_INPUT_SPACE) == 1)
+	// スペースボタンが押された瞬間だったらシーンを遷移する
+	if (InputKey::CheckInput(KEY_INPUT_SPACE) == InputKey::InputState::ePushMoment)
 	{
 		return Scene::ePlay;
 	}

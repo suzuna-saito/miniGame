@@ -9,6 +9,4 @@ SceneBase::SceneBase(Scene _nowScene)
 {
 	// 現在のシーンタグを更新
 	mIsSceneTag = _nowScene;
-	// 現在のゲームタイプをプレイに更新
-	mNowGameType = NowGameType::eGamePlay;
 }

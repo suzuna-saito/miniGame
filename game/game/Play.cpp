@@ -22,16 +22,10 @@ Play::~Play()
 SceneBase::Scene Play::Update()
 {
 	// 現在のゲームタイプがクリアになったら
-	if (/*mSceneTransitionFlag*/mNowGameType == NowGameType::eGameClear)
+	if (mNowGameType == NowGameType::eGameClear || mNowGameType == NowGameType::eGameOver)
 	{
 		// リザルトシーンタグを返す
 		return Scene::eResult;
-	}
-	// 現在のゲームタイプがオーバーになったら
-	else if (/*mSceneTransitionFlag*/mNowGameType == NowGameType::eGameOver)
-	{
-		// タイトルシーンタグを返す
-		return Scene::eTitle;
 	}
 
 	// シーン遷移条件を満たしていなかったら今のタグを返す

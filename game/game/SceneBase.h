@@ -1,6 +1,7 @@
 #pragma once
 #include "DxLib.h"
 #include "Text.h"
+#include "InputKey.h"
 
 /* 
 * シーンの基底クラス
