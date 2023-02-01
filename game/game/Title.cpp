@@ -6,7 +6,7 @@ Title::Title()
 	// 現在のゲームタイプをプレイに更新
 	mNowGameType = NowGameType::eGamePlay;
 
-	new Text();
+	new Text("これはタイトルです");
 }
 
 Title::~Title()

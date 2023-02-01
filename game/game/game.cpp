@@ -42,6 +42,7 @@ bool game::Init()
 
 void game::GameLoop()
 {
+	// 最初のシーンを設定
 	mNowScene = new Title();
 
 	// エスケープキーが押されるかウインドウが閉じられるまでループ

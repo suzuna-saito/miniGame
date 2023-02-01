@@ -6,7 +6,7 @@ class Text :public Object
 {
 public:
     // コンストラクタ
-    Text();
+    Text(const char* _text);
     // デストラクタ
     ~Text();
 

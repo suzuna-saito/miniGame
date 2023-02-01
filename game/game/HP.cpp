@@ -36,7 +36,7 @@ void HP::Draw()
 	for (int i = 0; i < mHP; ++i)
 	{
 		// wって書いてるけどこれはハートです
-		DrawStringToHandle(mPos.x + MDrawDistance * i, mPos.y, 
+		DrawStringToHandle((int)mPos.x + MDrawDistance * i, (int)mPos.y,
 			"w", GetColor(255, 255, 255), MFontHandle);
 	}
 }

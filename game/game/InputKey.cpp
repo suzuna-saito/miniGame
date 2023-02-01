@@ -40,11 +40,6 @@ InputKey::InputState InputKey::CheckInput(int _key)
     // 引数のキーの現在の入力状態を調べる
     int nowHitKey = CheckHitKey(_key);
 
-    if (nowHitKey == 1)
-    {
-        printf("");
-    }
-
     // コンテナの中に対象のキーがあるかを探す
     auto iter = std::find(mInputKey->mUseKey.begin(), mInputKey->mUseKey.end(), _key);
     // 対象のキーが無ければ
@@ -81,4 +76,7 @@ InputKey::InputState InputKey::CheckInput(int _key)
             return InputState::eNone;
         }
     }
+
+    // ステートを押していないにする
+    return InputState::eNone;
 }
